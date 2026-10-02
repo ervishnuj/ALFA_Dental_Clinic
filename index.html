@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALFA Dental Clinic | Best Dental Clinic in Ramanathapuram</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #1a1a2e;
+      background: #f8fafc;
+      line-height: 1.6;
+    }
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%);
+      color: white;
+      padding: 1rem 5%;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    }
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .logo {
+      font-size: 1.6rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .logo span {
+      background: white;
+      color: #0f766e;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: opacity 0.3s;
+    }
+    nav a:hover {
+      opacity: 0.85;
+    }
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, #0f766e 0%, #0d9488 50%, #14b8a6 100%);
+      color: white;
+      padding: 4rem 5% 5rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    .hero-text {
+      flex: 1;
+      min-width: 280px;
+      max-width: 550px;
+    }
+    .hero-text h1 {
+      font-size: 2.6rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+    .hero-text p {
+      font-size: 1.15rem;
+      opacity: 0.95;
+      margin-bottom: 1.8rem;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      padding: 0.35rem 1rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      margin-bottom: 1rem;
+    }
+    .btn {
+      display: inline-block;
+      background: white;
+      color: #0f766e;
+      padding: 0.9rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    .btn-outline {
+      background: transparent;
+      color: white;
+      border: 2px solid white;
+      margin-left: 0.8rem;
+    }
+    .hero-img {
+      flex: 1;
+      min-width: 260px;
+      max-width: 380px;
+      text-align: center;
+    }
+    .hero-img img {
+      width: 100%;
+      max-width: 320px;
+      border-radius: 16px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+      border: 4px solid rgba(255,255,255,0.3);
+    }
+    /* Services */
+    .section {
+      padding: 4.5rem 5%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .section-title {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .section-title h2 {
+      font-size: 2.1rem;
+      color: #0f766e;
+      margin-bottom: 0.5rem;
+    }
+    .section-title p {
+      color: #64748b;
+      font-size: 1.05rem;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.8rem;
+    }
+    .service-card {
+      background: white;
+      border-radius: 16px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      transition: transform 0.3s, box-shadow 0.3s;
+      border: 1px solid #e2e8f0;
+    }
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(15,118,110,0.12);
+    }
+    .service-icon {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+    }
+    .service-card h3 {
+      font-size: 1.25rem;
+      color: #0f766e;
+      margin-bottom: 0.6rem;
+    }
+    .service-card p {
+      color: #64748b;
+      font-size: 0.95rem;
+    }
+    /* About */
+    .about {
+      background: #f0fdfa;
+      border-radius: 20px;
+      padding: 3rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.5rem;
+      align-items: center;
+    }
+    .about-text {
+      flex: 1;
+      min-width: 280px;
+    }
+    .about-text h2 {
+      color: #0f766e;
+      font-size: 1.9rem;
+      margin-bottom: 1rem;
+    }
+    .about-text p {
+      color: #334155;
+      margin-bottom: 1rem;
+    }
+    .features {
+      list-style: none;
+      margin-top: 1.2rem;
+    }
+    .features li {
+      padding: 0.4rem 0;
+      color: #0f766e;
+      font-weight: 500;
+    }
+    .features li::before {
+      content: "✓ ";
+      font-weight: 700;
+    }
+    /* Appointment */
+    .appointment {
+      background: white;
+      border-radius: 20px;
+      padding: 2.5rem;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .appointment h2 {
+      text-align: center;
+      color: #0f766e;
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+    }
+    .form-group {
+      margin-bottom: 1.2rem;
+    }
+    .form-group label {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 0.4rem;
+      color: #334155;
+      font-size: 0.95rem;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 10px;
+      font-family: inherit;
+      font-size: 1rem;
+      transition: border-color 0.2s;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #14b8a6;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    .submit-btn {
+      width: 100%;
+      background: linear-gradient(135deg, #0f766e, #14b8a6);
+      color: white;
+      padding: 1rem;
+      border: none;
+      border-radius: 12px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 0.5rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(15,118,110,0.3);
+    }
+    /* Contact */
+    .contact-info {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .contact-card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 14px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+    .contact-card h4 {
+      color: #0f766e;
+      margin-bottom: 0.5rem;
+    }
+    /* Footer */
+    footer {
+      background: #0f172a;
+      color: #94a3b8;
+      text-align: center;
+      padding: 2rem 5%;
+      margin-top: 3rem;
+    }
+    footer strong {
+      color: white;
+    }
+    /* Success message */
+    #successMsg {
+      display: none;
+      background: #d1fae5;
+      color: #065f46;
+      padding: 1rem;
+      border-radius: 10px;
+      text-align: center;
+      margin-top: 1rem;
+      font-weight: 500;
+    }
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-text h1 { font-size: 2rem; }
+      nav a { margin-left: 1rem; font-size: 0.85rem; }
+      .form-row { grid-template-columns: 1fr; }
+      .btn-outline { margin-left: 0; margin-top: 0.8rem; display: inline-block; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="nav">
+      <div class="logo">
+        <span>🦷</span> ALFA Dental
+      </div>
+      <nav>
+        <a href="#services">சேவைகள்</a>
+        <a href="#about">எங்களைப் பற்றி</a>
+        <a href="#appointment">Appointment</a>
+        <a href="#contact">தொடர்பு</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <div class="badge">★ Best Dental Clinic in Ramanathapuram</div>
+      <h1>ALFA Dental Clinic</h1>
+      <p>Implant Center • Invisalign • Aligner • Teeth Whitening<br>
+      உங்கள் புன்னகைக்காக நவீன பல் சிகிச்சை</p>
+      <a href="#appointment" class="btn">Book Appointment</a>
+      <a href="#services" class="btn btn-outline">Our Services</a>
+    </div>
+    <div class="hero-img">
+      <img src="alfa-clinic.png" alt="ALFA Dental Clinic - Ramanathapuram">
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section" id="services">
+    <div class="section-title">
+      <h2>எங்கள் சேவைகள்</h2>
+      <p>நவீன தொழில்நுட்பத்துடன் முழுமையான பல் சிகிச்சை</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">🦷</div>
+        <h3>Dental Implant</h3>
+        <p>நீடித்த மற்றும் இயற்கையான தோற்றமுள்ள பல் மாற்று சிகிச்சை. Implant Center.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">✨</div>
+        <h3>Invisalign</h3>
+        <p>தெளிவான aligners மூலம் பல் சீரமைப்பு. Invisible braces treatment.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">😁</div>
+        <h3>Aligner</h3>
+        <p>Comfortable clear aligners for perfect smile alignment.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">💎</div>
+        <h3>Teeth Whitening</h3>
+        <p>பாதுகாப்பான மற்றும் விரைவான பல் வெண்மை சிகிச்சை.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section">
+    <div class="about" id="about">
+      <div class="about-text">
+        <h2>ALFA Dental Clinic பற்றி</h2>
+        <p>ராமநாதபுரத்தில் அமைந்துள்ள ALFA Dental Clinic, நவீன உபகரணங்கள் மற்றும் அனுபவமிக்க மருத்துவர்களுடன் சிறந்த பல் சிகிச்சையை வழங்குகிறது.</p>
+        <p>Implant, Invisalign, Aligner மற்றும் Teeth Whitening உள்ளிட்ட அனைத்து சிகிச்சைகளும் ஒரே இடத்தில்.</p>
+        <ul class="features">
+          <li>Experienced Dental Specialists</li>
+          <li>Modern Equipment & Sterilization</li>
+          <li>Pain-free Treatment</li>
+          <li>Affordable Packages</li>
+          <li>Patient-friendly Atmosphere</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Appointment Form -->
+  <section class="section" id="appointment">
+    <div class="appointment">
+      <h2>Book Your Appointment</h2>
+      <form id="apptForm" onsubmit="return handleSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label>பெயர் / Name *</label>
+            <input type="text" id="name" required placeholder="உங்கள் பெயர்">
+          </div>
+          <div class="form-group">
+            <label>மொபைல் / Phone *</label>
+            <input type="tel" id="phone" required placeholder="98765 43210">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>சேவை / Service</label>
+          <select id="service">
+            <option value="">Select Service</option>
+            <option value="Implant">Dental Implant</option>
+            <option value="Invisalign">Invisalign</option>
+            <option value="Aligner">Aligner</option>
+            <option value="Whitening">Teeth Whitening</option>
+            <option value="General">General Checkup</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>தேதி / Preferred Date</label>
+            <input type="date" id="date">
+          </div>
+          <div class="form-group">
+            <label>நேரம் / Time</label>
+            <select id="time">
+              <option value="">Select Time</option>
+              <option>09:00 AM</option>
+              <option>10:00 AM</option>
+              <option>11:00 AM</option>
+              <option>12:00 PM</option>
+              <option>04:00 PM</option>
+              <option>05:00 PM</option>
+              <option>06:00 PM</option>
+              <option>07:00 PM</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>குறிப்பு / Message</label>
+          <textarea id="message" rows="3" placeholder="Any special request..."></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Appointment Book செய்யவும்</button>
+      </form>
+      <div id="successMsg">
+        ✅ Appointment request received successfully!<br>
+        (This is a DEMO – Clinic will contact you soon)
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section" id="contact">
+    <div class="section-title">
+      <h2>தொடர்பு கொள்ளுங்கள்</h2>
+      <p>ALFA Dental Clinic – Ramanathapuram</p>
+    </div>
+    <div class="contact-info">
+      <div class="contact-card">
+        <h4>📍 Location</h4>
+        <p>Ramanathapuram, Tamil Nadu</p>
+      </div>
+      <div class="contact-card">
+        <h4>📞 Phone</h4>
+        <p>+91 XXXXX XXXXX<br>(Demo number)</p>
+      </div>
+      <div class="contact-card">
+        <h4>⏰ Timing</h4>
+        <p>Mon – Sat<br>9:00 AM – 8:00 PM</p>
+      </div>
+      <div class="contact-card">
+        <h4>🌐 Services</h4>
+        <p>Implant | Invisalign<br>Aligner | Whitening</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p><strong>ALFA Dental Clinic</strong> – Best Dental Clinic in Ramanathapuram</p>
+    <p style="margin-top: 0.5rem; font-size: 0.9rem;">© 2026 ALFA Dental Clinic. This is a DEMO website for demonstration purpose only.</p>
+  </footer>
+
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const phone = document.getElementById('phone').value;
+      if (!name || !phone) {
+        alert('Please fill Name and Phone number');
+        return false;
+      }
+      // Show success message
+      document.getElementById('successMsg').style.display = 'block';
+      document.getElementById('apptForm').reset();
+      // Scroll to message
+      document.getElementById('successMsg').scrollIntoView({ behavior: 'smooth' });
+      return false;
+    }
+  </script>
+</body>
+</html>
